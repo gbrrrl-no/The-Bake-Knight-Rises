@@ -1,2 +1,3 @@
 # The-Bake-Knight-Rises
-joguinho de multimídia
+
+Sintam-se livres pra modificar o readme, galera :)
