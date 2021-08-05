@@ -146,7 +146,8 @@ public class Enemy_Behaviour : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        if(curHealth - dmg <= 0){
+        anim.SetBool("isBeingHit", true);
+        if (curHealth - dmg <= 0){
             curHealth -= dmg;
             curHealth = Mathf.Max(curHealth, 0);
             healthBar.SetHealth(curHealth);
@@ -154,7 +155,6 @@ public class Enemy_Behaviour : MonoBehaviour
             healthBar.SetVisible(false);
         }else
         {
-            anim.SetBool("isBeingHit", true);
             curHealth -= dmg;
             curHealth = Mathf.Max(curHealth, 0);
             healthBar.SetHealth(curHealth);
