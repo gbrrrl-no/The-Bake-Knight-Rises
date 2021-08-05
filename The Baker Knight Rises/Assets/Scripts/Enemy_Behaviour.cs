@@ -71,7 +71,8 @@ public class Enemy_Behaviour : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D trigger)
     {
-        if(trigger.gameObject.tag == "Player")
+        //7 == Player Layer, Get Dinamycally later
+        if(trigger.gameObject.layer == 7)
         {
             target = trigger.gameObject;
             isPlayerInRange = true;
@@ -147,22 +148,16 @@ public class Enemy_Behaviour : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         anim.SetBool("isBeingHit", true);
-        if (curHealth - dmg <= 0){
-            curHealth -= dmg;
-            curHealth = Mathf.Max(curHealth, 0);
-            healthBar.SetHealth(curHealth);
+        curHealth -= dmg;
+        curHealth = Mathf.Max(curHealth, 0);
+        healthBar.SetHealth(curHealth);
+        if (curHealth == 0){
             anim.SetBool("isDead", true);
             healthBar.SetVisible(false);
-        }else
-        {
-            curHealth -= dmg;
-            curHealth = Mathf.Max(curHealth, 0);
-            healthBar.SetHealth(curHealth);
         }
-        
     }
 
-    public void stopBeingHit()
+    public void StopBeingHit()
     {
         anim.SetBool("isBeingHit", false);
     }

@@ -6,7 +6,7 @@ public class PlayerActions : MonoBehaviour
 {
     public Animator animator;
     public Transform attackPoint;
-    private float attackRange = 0.96f;
+    public float attackRange = 0.96f;
     public LayerMask enemyLayers;
 
     // Start is called before the first frame update
@@ -27,7 +27,9 @@ public class PlayerActions : MonoBehaviour
             foreach (var collidedEnemy in hits)
             {
                 Debug.Log("Acertou inimigo");
-                collidedEnemy.GetComponent<Enemy_Behaviour>().TakeDamage(20);
+                GameObject root = collidedEnemy.transform.root.gameObject;
+                root.GetComponent<Enemy_Behaviour>().TakeDamage(20);
+                
                 //Debug.Log(collidedEnemy.GetComponent<Enemy_Behaviour>().curHealth);            
             }
         }
