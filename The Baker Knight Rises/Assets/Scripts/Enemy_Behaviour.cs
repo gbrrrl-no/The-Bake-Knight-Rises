@@ -17,7 +17,8 @@ public class Enemy_Behaviour : MonoBehaviour
     #endregion
 
     #region Private Variables
-    private RaycastHit2D hit;
+    private RaycastHit2D hitLeft;
+    private RaycastHit2D hitRight;
     private GameObject target;
     private Animator anim;
     private float distance;
@@ -41,7 +42,8 @@ public class Enemy_Behaviour : MonoBehaviour
         {
             if (isPlayerInRange)
             {
-                hit = Physics2D.Raycast(rayCast.position, Vector2.left, rayCastLength, rayCastMask);
+                hitLeft = Physics2D.Raycast(rayCast.position, Vector2.left, rayCastLength, rayCastMask);
+                hitRight = Physics2D.Raycast(rayCast.position, Vector2.right, rayCastLength, rayCastMask);
                 RaycastDebugger();
             }
 
@@ -52,7 +54,7 @@ public class Enemy_Behaviour : MonoBehaviour
             }
 
             //When Player is detected
-            if (hit.collider != null)
+            if (hitLeft.collider != null || hitRight.collider != null)
             {
                 EnemyLogic();
             } else
@@ -67,8 +69,7 @@ public class Enemy_Behaviour : MonoBehaviour
             }
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D trigger)
+    private void OnTriggerStay2D(Collider2D trigger)
     {
         if(trigger.gameObject.tag == "Player")
         {
@@ -145,7 +146,8 @@ public class Enemy_Behaviour : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        if(curHealth - dmg <= 0){
+        anim.SetBool("isBeingHit", true);
+        if (curHealth - dmg <= 0){
             curHealth -= dmg;
             curHealth = Mathf.Max(curHealth, 0);
             healthBar.SetHealth(curHealth);
@@ -153,7 +155,6 @@ public class Enemy_Behaviour : MonoBehaviour
             healthBar.SetVisible(false);
         }else
         {
-            anim.SetBool("isBeingHit", true);
             curHealth -= dmg;
             curHealth = Mathf.Max(curHealth, 0);
             healthBar.SetHealth(curHealth);
