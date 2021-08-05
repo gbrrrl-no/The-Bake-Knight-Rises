@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
     public int curHealth;
     public int maxHealth = 100;
+    public Animator animator;
 
     public HealthBar healthBar;
 
@@ -22,10 +23,21 @@ public class PlayerStats : MonoBehaviour
         
     }
 
-    public void TakeDamage(int dmg) 
+    public void TakeDamage(int dmg)
     {
+        animator.SetBool("IsBeingHit", true);
         curHealth -= dmg;
         curHealth = Mathf.Max(curHealth, 0);
         healthBar.SetHealth(curHealth);
+        if (curHealth == 0)
+        {
+            animator.SetBool("IsDead", true);
+        }
     }
+
+    public void stopBeingHit()
+    {
+        animator.SetBool("IsBeingHit", false);
+    }
+
 }
