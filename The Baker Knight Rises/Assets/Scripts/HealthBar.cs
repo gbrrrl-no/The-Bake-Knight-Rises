@@ -8,8 +8,6 @@ public class HealthBar : MonoBehaviour
     public Slider healthSlider;
     public Gradient gradient;
     public Image fill;
-    public Transform objectToFollow;
-    public Vector3 offset;
 
     public void SetHealth(int health) 
     {
@@ -27,10 +25,5 @@ public class HealthBar : MonoBehaviour
 
     public void SetVisible(bool visible){
         gameObject.SetActive(visible);
-    }
-    
-    void Update()
-    {
-        transform.position = Camera.main.WorldToScreenPoint(objectToFollow.position + offset);
     }
 }

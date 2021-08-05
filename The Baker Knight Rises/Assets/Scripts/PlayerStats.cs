@@ -22,7 +22,7 @@ public class PlayerStats : MonoBehaviour
         
     }
 
-    void TakeDamage(int dmg) 
+    public void TakeDamage(int dmg) 
     {
         curHealth -= dmg;
         curHealth = Mathf.Max(curHealth, 0);
