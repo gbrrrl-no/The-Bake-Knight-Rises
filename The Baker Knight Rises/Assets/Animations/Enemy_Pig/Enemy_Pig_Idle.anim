@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Pig
+  m_Name: Enemy_Pig_Idle
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -41,8 +41,10 @@ AnimationClip:
       value: {fileID: -6983562990028683331, guid: abd16e0affa8c2a45a09479d9a6fa953, type: 3}
     - time: 1
       value: {fileID: -1903310279220368910, guid: abd16e0affa8c2a45a09479d9a6fa953, type: 3}
+    - time: 1.1
+      value: {fileID: 2826186669421539911, guid: abd16e0affa8c2a45a09479d9a6fa953, type: 3}
     attribute: m_Sprite
-    path: 
+    path: Enemy_Pig_Sprites
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 10
@@ -53,7 +55,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 4290888030
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -71,12 +73,13 @@ AnimationClip:
     - {fileID: -4453737675818896170, guid: abd16e0affa8c2a45a09479d9a6fa953, type: 3}
     - {fileID: -6983562990028683331, guid: abd16e0affa8c2a45a09479d9a6fa953, type: 3}
     - {fileID: -1903310279220368910, guid: abd16e0affa8c2a45a09479d9a6fa953, type: 3}
+    - {fileID: 2826186669421539911, guid: abd16e0affa8c2a45a09479d9a6fa953, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1
+    m_StopTime: 1.2
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
