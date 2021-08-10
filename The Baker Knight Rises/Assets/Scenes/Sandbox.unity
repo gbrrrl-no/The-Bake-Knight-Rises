@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 123985918}
   - component: {fileID: 123985917}
   - component: {fileID: 123985916}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Enemy_Pig_Heath_Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201216306}
   - component: {fileID: 201216307}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Enemy_Pig_Sprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +448,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232937615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1016,7 +1016,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340007579}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.097, z: 0}
+  m_LocalPosition: {x: 0, y: 0.07, z: 0}
   m_LocalScale: {x: 1.155, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 651432767}
@@ -1046,7 +1046,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.36936474, y: 0.2892841}
+  m_Size: {x: 0.37, y: 0.5}
   m_EdgeRadius: 0
 --- !u!1 &456430235
 GameObject:
@@ -1789,7 +1789,7 @@ GameObject:
   - component: {fileID: 727851239}
   - component: {fileID: 727851240}
   - component: {fileID: 727851241}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -2025,7 +2025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 756992090}
   attackPoint: {fileID: 1206090145}
-  attackRange: 0.97
+  attackRange: 0.88
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 307
+    m_Bits: 1331
   m_GroundCheck: {fileID: 324272190}
   m_CeilingCheck: {fileID: 44909090}
   m_CrouchDisableCollider: {fileID: 0}
@@ -2255,7 +2255,7 @@ GameObject:
   - component: {fileID: 937795217}
   - component: {fileID: 937795219}
   - component: {fileID: 937795218}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2343,7 +2343,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206090144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.131, y: -0.258, z: 0}
+  m_LocalPosition: {x: 0.22, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 756992087}
@@ -2405,7 +2405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1318994574}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Raycast
   m_TagString: Untagged
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -2437,7 +2437,7 @@ GameObject:
   - component: {fileID: 1431969742}
   - component: {fileID: 1431969744}
   - component: {fileID: 1431969743}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2513,7 +2513,7 @@ GameObject:
   - component: {fileID: 1467459941}
   - component: {fileID: 1467459938}
   - component: {fileID: 1467459940}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Enemy_Pig
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2613,7 +2613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540169741}
   - component: {fileID: 1540169742}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Trigger_Area
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -2696,7 +2696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 112.79999, y: -30.899994}
+  m_AnchoredPosition: {x: 112.80005, y: -30.899994}
   m_SizeDelta: {x: 180.563, y: 31.444794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597931824
@@ -3112,7 +3112,7 @@ GameObject:
   - component: {fileID: 2054725233}
   - component: {fileID: 2054725235}
   - component: {fileID: 2054725234}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -25,6 +25,7 @@ public class Enemy_Behaviour : MonoBehaviour
     private bool isPlayerInRange;
     private bool isOnCooldown;
     private float intTimer;
+    private bool facingLeft;
     #endregion
 
     private void Awake()
@@ -69,6 +70,26 @@ public class Enemy_Behaviour : MonoBehaviour
             }
         }
     }
+
+    void LateUpdate (){
+ 
+        Vector3 localScale = transform.localScale;
+        if (hitLeft.collider != null)
+        {
+            facingLeft = true;
+        }
+        else if (hitRight.collider != null)
+        {
+            facingLeft = false;
+        }
+        if (((facingLeft ) && (localScale.x < 0 )) || ((!facingLeft) && (localScale.x > 0 ))) 
+        {
+            localScale.x *= -1;
+        }
+        transform.localScale = localScale;
+    }
+
+
     private void OnTriggerStay2D(Collider2D trigger)
     {
         //7 == Player Layer, Get Dinamycally later
@@ -101,7 +122,6 @@ public class Enemy_Behaviour : MonoBehaviour
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Pig_Attack"))
         {
             Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
-
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
     }
