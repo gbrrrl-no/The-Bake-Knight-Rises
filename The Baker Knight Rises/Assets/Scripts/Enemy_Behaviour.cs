@@ -14,6 +14,8 @@ public class Enemy_Behaviour : MonoBehaviour
     public int curHealth;
     public int maxHealth = 100;
     public HealthBar healthBar;
+    public BoxCollider2D playerBoxCollider;
+    public CircleCollider2D playerCircleCollider;
     #endregion
 
     #region Private Variables
@@ -172,9 +174,16 @@ public class Enemy_Behaviour : MonoBehaviour
         curHealth = Mathf.Max(curHealth, 0);
         healthBar.SetHealth(curHealth);
         if (curHealth == 0){
-            anim.SetBool("isDead", true);
-            healthBar.SetVisible(false);
+            DiePig();
         }
+    }
+
+    public void DiePig()
+    {
+        Physics2D.IgnoreCollision(playerCircleCollider, gameObject.transform.Find("Enemy_Pig_Collider/Box_Collider").GetComponent<BoxCollider2D>());
+        Physics2D.IgnoreCollision(playerBoxCollider, gameObject.transform.Find("Enemy_Pig_Collider/Box_Collider").GetComponent<BoxCollider2D>());
+        anim.SetBool("isDead", true);
+        healthBar.SetVisible(false);
     }
 
     public void StopBeingHit()
