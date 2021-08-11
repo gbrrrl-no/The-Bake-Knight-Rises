@@ -28,6 +28,7 @@ public class Enemy_Behaviour : MonoBehaviour
     private bool isOnCooldown;
     private float intTimer;
     private bool facingLeft;
+    private int time2DisappearAfterDeath = 7; //seconds
     #endregion
 
     private void Awake()
@@ -184,6 +185,26 @@ public class Enemy_Behaviour : MonoBehaviour
         Physics2D.IgnoreCollision(playerBoxCollider, gameObject.transform.Find("Enemy_Pig_Collider/Box_Collider").GetComponent<BoxCollider2D>());
         anim.SetBool("isDead", true);
         healthBar.SetVisible(false);
+        
+        StartCoroutine(DimPig2Death());
+
+    }
+
+    IEnumerator DimPig2Death()
+    {
+
+        float startAnimation = Time.fixedTime;
+
+        while (Time.fixedTime - startAnimation < time2DisappearAfterDeath)
+        {
+            yield return new WaitForSeconds(0.05f);
+
+            Color pigColor = gameObject.transform.Find("Enemy_Pig_Sprites").GetComponent<SpriteRenderer>().color;
+            pigColor.a *= 0.95f; // TODO: base this on time to disapear after death
+            gameObject.transform.Find("Enemy_Pig_Sprites").GetComponent<SpriteRenderer>().color = pigColor;
+        }
+
+        Destroy(gameObject);
     }
 
     public void StopBeingHit()
