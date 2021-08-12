@@ -2581,7 +2581,10 @@ MonoBehaviour:
   cooldownTimer: 3
   curHealth: 100
   maxHealth: 100
+  time2DisappearAfterDeath: 7
   healthBar: {fileID: 2054725234}
+  playerBoxCollider: {fileID: 270058533}
+  playerCircleCollider: {fileID: 1288283814}
 --- !u!50 &1467459941
 Rigidbody2D:
   serializedVersion: 4
