@@ -7,20 +7,15 @@ public class Player_Stats : MonoBehaviour
     public int curHealth;
     public int maxHealth = 100;
     public Animator animator;
-
     public HealthBar healthBar;
+
+    private int collectedMeat = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void TakeDamage(int dmg)
@@ -40,4 +35,8 @@ public class Player_Stats : MonoBehaviour
         animator.SetBool("IsBeingHit", false);
     }
 
+    public void increaseMeatCollection()
+    {
+        collectedMeat++;
+    }
 }

@@ -537,6 +537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 270058532}
   - component: {fileID: 270058533}
+  - component: {fileID: 270058534}
   m_Layer: 7
   m_Name: Box_Collider
   m_TagString: Untagged
@@ -584,6 +585,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4637963, y: 0.3260722}
   m_EdgeRadius: 0
+--- !u!114 &270058534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270058531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4392ee9ac44352741bd29299d5ec6b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &295352588
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,6 +3101,7 @@ MonoBehaviour:
   maxHealth: 100
   animator: {fileID: 756992090}
   healthBar: {fileID: 1597931824}
+  collectedMeat: 0
 --- !u!50 &756992089
 Rigidbody2D:
   serializedVersion: 4
@@ -3521,6 +3535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1288283813}
   - component: {fileID: 1288283814}
+  - component: {fileID: 1288283815}
   m_Layer: 7
   m_Name: Circle_Collider
   m_TagString: Untagged
@@ -3558,6 +3573,18 @@ CircleCollider2D:
   m_Offset: {x: -0.15, y: -0.24}
   serializedVersion: 2
   m_Radius: 0.1945757
+--- !u!114 &1288283815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288283812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4392ee9ac44352741bd29299d5ec6b9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1431969741
 GameObject:
   m_ObjectHideFlags: 0
@@ -3711,11 +3738,12 @@ MonoBehaviour:
   healthBar: {fileID: 2054725234}
   leftLimit: {fileID: 333984788}
   rightLimit: {fileID: 779902752}
-  target: {fileID: 0}
-  isPlayerInRange: 0
   hotzone: {fileID: 175372641}
   triggerArea: {fileID: 1540169740}
   attackOffset: {x: -0.12, y: 0, z: 0}
+  target: {fileID: 0}
+  isPlayerInRange: 0
+  lootSystem: {fileID: 11400000, guid: c8bc76699f71a8f44a3efc3383c57a60, type: 2}
 --- !u!50 &1467459941
 Rigidbody2D:
   serializedVersion: 4

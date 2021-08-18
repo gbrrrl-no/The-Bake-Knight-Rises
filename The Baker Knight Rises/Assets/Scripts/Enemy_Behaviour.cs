@@ -1,23 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Behaviour : MonoBehaviour
 {
+    private enum State {
+        Alive,
+        Dead
+    }
+
     #region Public Variables
+    [Header("Combat Variables")]
     public float attackDistance; //Min dist for attack
     public float moveSpeed;
     public float cooldownTimer; // Cooldown between attacks
     public int curHealth;
     public int maxHealth = 100;
+
+    [Header("Combat Objects")]
     public HealthBar healthBar;
     public Transform leftLimit;
     public Transform rightLimit;
-    [HideInInspector] public Transform target;
-    [HideInInspector] public bool isPlayerInRange;
     public GameObject hotzone;
     public GameObject triggerArea;
     public Vector3 attackOffset;
+    [HideInInspector] public Transform target;
+    [HideInInspector] public bool isPlayerInRange;
+    [Header("Loot Table")]
+    public LootTable lootSystem;
     #endregion
 
     #region Private Variables
@@ -28,6 +39,7 @@ public class Enemy_Behaviour : MonoBehaviour
     private bool isAttacking;
     private bool isOnCooldown;
     private bool isOnAttackRange;
+    private State state;
     #endregion
 
     private void Awake()
@@ -38,6 +50,7 @@ public class Enemy_Behaviour : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        state = State.Alive;
     }
 
     // Update is called once per frame
@@ -128,9 +141,29 @@ public class Enemy_Behaviour : MonoBehaviour
         curHealth -= dmg;
         curHealth = Mathf.Max(curHealth, 0);
         healthBar.SetHealth(curHealth);
-        if (curHealth == 0){
-            anim.SetBool("isDead", true);
-            healthBar.SetVisible(false);
+        if (curHealth == 0 && state == State.Alive){
+            HandleDeath();       
+        }
+    }
+
+    public void HandleDeath()
+    {
+        state = State.Dead;
+        anim.SetBool("isDead", true);
+        healthBar.SetVisible(false);
+        DropLoot();
+        Destroy(this.gameObject);
+    }
+
+    private void DropLoot()
+    {
+        if(lootSystem != null)
+        {
+            GameObject toDrop = lootSystem.GetLoot();
+            if(toDrop != null)
+            {
+                Instantiate(toDrop, transform.position, Quaternion.identity);
+            }
         }
     }
 
