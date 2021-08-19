@@ -58,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 34
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -80,7 +80,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -92,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,12 +106,12 @@ TextureImporter:
       name: death_0
       rect:
         serializedVersion: 2
-        x: 9
+        x: 0
         y: 0
-        width: 32
+        width: 78
         height: 58
-      alignment: 9
-      pivot: {x: 0.405, y: 0.44}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -127,12 +127,12 @@ TextureImporter:
       name: death_1
       rect:
         serializedVersion: 2
-        x: 83
+        x: 78
         y: 0
-        width: 34
+        width: 78
         height: 58
-      alignment: 9
-      pivot: {x: 0.405, y: 0.44}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -148,12 +148,12 @@ TextureImporter:
       name: death_2
       rect:
         serializedVersion: 2
-        x: 161
+        x: 156
         y: 0
-        width: 35
+        width: 78
         height: 58
-      alignment: 9
-      pivot: {x: 0.405, y: 0.44}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: death_3
       rect:
         serializedVersion: 2
-        x: 239
+        x: 234
         y: 0
-        width: 35
+        width: 78
         height: 58
-      alignment: 9
-      pivot: {x: 0.405, y: 0.44}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

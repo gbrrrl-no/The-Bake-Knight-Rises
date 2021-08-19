@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 861d372fd83189143b65bdacf6c7e2ca
+guid: 17f636a3bf14140af856987e8a5d6602
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7522094942047569111
-    second: Dead (34x28)_0
+      213: 4281637774074219296
+    second: jump_0
   - first:
-      213: 425510035627860162
-    second: Dead (34x28)_1
+      213: -7862396843884538191
+    second: jump_1
   - first:
-      213: 2332378773207366414
-    second: Dead (34x28)_2
-  - first:
-      213: 2076103681765718411
-    second: Dead (34x28)_3
+      213: 8276514422256456541
+    second: jump_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +55,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 34
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dead (34x28)_0
+      name: jump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -117,14 +114,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92bfd7401862c9790800000000000000
-      internalID: -7522094942047569111
+      spriteID: 02b8694dede6b6b30800000000000000
+      internalID: 4281637774074219296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dead (34x28)_1
+      name: jump_1
       rect:
         serializedVersion: 2
         x: 34
@@ -138,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c066f97f17b7e500800000000000000
-      internalID: 425510035627860162
+      spriteID: 1b61c1d2ab723e290800000000000000
+      internalID: -7862396843884538191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dead (34x28)_2
+      name: jump_2
       rect:
         serializedVersion: 2
         x: 68
@@ -159,29 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bbfa203264e5020800000000000000
-      internalID: 2332378773207366414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dead (34x28)_3
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 0
-        width: 34
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b89b6848c4dcfcc10800000000000000
-      internalID: 2076103681765718411
+      spriteID: d535ef424061cd270800000000000000
+      internalID: 8276514422256456541
       vertices: []
       indices: 
       edges: []

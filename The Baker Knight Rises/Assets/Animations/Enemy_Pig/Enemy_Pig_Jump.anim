@@ -20,11 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: d99c201237dab9e46bf3ca482ee5dee7, type: 3}
+      value: {fileID: 4281637774074219296, guid: 17f636a3bf14140af856987e8a5d6602, type: 3}
     - time: 0.1
-      value: {fileID: 21300000, guid: 3616208e906f40d4f95d8d9ed0aadc0f, type: 3}
+      value: {fileID: -7862396843884538191, guid: 17f636a3bf14140af856987e8a5d6602, type: 3}
     - time: 0.2
-      value: {fileID: 21300000, guid: d05248d15c5057744b6bd3d5073ea4d1, type: 3}
+      value: {fileID: 8276514422256456541, guid: 17f636a3bf14140af856987e8a5d6602, type: 3}
     attribute: m_Sprite
     path: Enemy_Pig_Sprites
     classID: 212
@@ -44,9 +44,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: d99c201237dab9e46bf3ca482ee5dee7, type: 3}
-    - {fileID: 21300000, guid: 3616208e906f40d4f95d8d9ed0aadc0f, type: 3}
-    - {fileID: 21300000, guid: d05248d15c5057744b6bd3d5073ea4d1, type: 3}
+    - {fileID: 4281637774074219296, guid: 17f636a3bf14140af856987e8a5d6602, type: 3}
+    - {fileID: -7862396843884538191, guid: 17f636a3bf14140af856987e8a5d6602, type: 3}
+    - {fileID: 8276514422256456541, guid: 17f636a3bf14140af856987e8a5d6602, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

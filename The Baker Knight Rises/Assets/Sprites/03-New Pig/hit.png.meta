@@ -1,7 +1,13 @@
 fileFormatVersion: 2
-guid: b6db25f9818f44a45a553cf29d882f13
+guid: ec77127301ebe44aa90b2d96401eb80a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -59066101396820148
+    second: hit_0
+  - first:
+      213: -9037724387597929990
+    second: hit_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 34
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -91,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Attack (34x28)_0
+      name: hit_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8817de2a03252f0f0800000000000000
-      internalID: -1084714191397490296
+      spriteID: c4fa9f791b72e2ff0800000000000000
+      internalID: -59066101396820148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Attack (34x28)_1
+      name: hit_1
       rect:
         serializedVersion: 2
         x: 34
@@ -126,71 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b06842db76211dfc0800000000000000
-      internalID: -3471973600961722869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack (34x28)_2
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 0
-        width: 34
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c71c2f1ed44d8530800000000000000
-      internalID: 3858816176522794952
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack (34x28)_3
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 0
-        width: 34
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3596d186e61712fe0800000000000000
-      internalID: -1215565705406224045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Attack (34x28)_4
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 0
-        width: 34
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e35619d30fba01100800000000000000
-      internalID: 76750241978737982
+      spriteID: af1375bad8d839280800000000000000
+      internalID: -9037724387597929990
       vertices: []
       indices: 
       edges: []
