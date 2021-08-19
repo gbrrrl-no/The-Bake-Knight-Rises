@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6430b88ae7fee48288e4a462154b35e1
+guid: 5098417a77c8d47faade2c07d2c8cbfa
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -123,7 +123,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 79
+        width: 78
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,9 +142,9 @@ TextureImporter:
       name: run_1
       rect:
         serializedVersion: 2
-        x: 79
+        x: 78
         y: 0
-        width: 79
+        width: 78
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,9 +163,9 @@ TextureImporter:
       name: run_2
       rect:
         serializedVersion: 2
-        x: 158
+        x: 156
         y: 0
-        width: 79
+        width: 78
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,9 +184,9 @@ TextureImporter:
       name: run_3
       rect:
         serializedVersion: 2
-        x: 237
+        x: 234
         y: 0
-        width: 79
+        width: 78
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,9 +205,9 @@ TextureImporter:
       name: run_4
       rect:
         serializedVersion: 2
-        x: 316
+        x: 312
         y: 0
-        width: 79
+        width: 78
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -226,9 +226,9 @@ TextureImporter:
       name: run_5
       rect:
         serializedVersion: 2
-        x: 395
+        x: 390
         y: 0
-        width: 79
+        width: 78
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -247,9 +247,9 @@ TextureImporter:
       name: run_6
       rect:
         serializedVersion: 2
-        x: 474
+        x: 468
         y: 0
-        width: 79
+        width: 78
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -268,9 +268,9 @@ TextureImporter:
       name: run_7
       rect:
         serializedVersion: 2
-        x: 553
+        x: 546
         y: 0
-        width: 79
+        width: 78
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -289,9 +289,9 @@ TextureImporter:
       name: run_8
       rect:
         serializedVersion: 2
-        x: 632
+        x: 624
         y: 0
-        width: 79
+        width: 78
         height: 58
       alignment: 0
       pivot: {x: 0, y: 0}

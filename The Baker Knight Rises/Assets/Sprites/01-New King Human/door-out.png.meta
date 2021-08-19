@@ -1,16 +1,31 @@
 fileFormatVersion: 2
-guid: 8b728e4af86214738b9422cf6b19c7a2
+guid: 78cd2febfc055490ea6b801eb3331ed5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 827538889749247048
-    second: attack_0
+      213: 4756117487211395573
+    second: door-out_0
   - first:
-      213: -5010287565412364656
-    second: attack_1
+      213: -1076160013147323656
+    second: door-out_1
   - first:
-      213: -5463148037355797382
-    second: attack_2
+      213: 4741825669358415620
+    second: door-out_2
+  - first:
+      213: -6814012586019335049
+    second: door-out_3
+  - first:
+      213: 7896996213044892734
+    second: door-out_4
+  - first:
+      213: -4957557110690940774
+    second: door-out_5
+  - first:
+      213: 4593276605701902391
+    second: door-out_6
+  - first:
+      213: 2273221384904842958
+    second: door-out_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack_0
+      name: door-out_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84433595c320c7b00800000000000000
-      internalID: 827538889749247048
+      spriteID: 5f93247d7af110240800000000000000
+      internalID: 4756117487211395573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_1
+      name: door-out_1
       rect:
         serializedVersion: 2
         x: 78
@@ -135,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09e0a014102e77ab0800000000000000
-      internalID: -5010287565412364656
+      spriteID: 8f2cfd67b26b011f0800000000000000
+      internalID: -1076160013147323656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_2
+      name: door-out_2
       rect:
         serializedVersion: 2
         x: 156
@@ -156,8 +171,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7409061ecffe24b0800000000000000
-      internalID: -5463148037355797382
+      spriteID: 40fefe0b2595ec140800000000000000
+      internalID: 4741825669358415620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-out_3
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774d64bb7a3cf61a0800000000000000
+      internalID: -6814012586019335049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-out_4
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3455273734c79d60800000000000000
+      internalID: 7896996213044892734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-out_5
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98fd87f218333bb0800000000000000
+      internalID: -4957557110690940774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-out_6
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73059f59cb89ebf30800000000000000
+      internalID: 4593276605701902391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-out_7
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece13173eca1c8f10800000000000000
+      internalID: 2273221384904842958
       vertices: []
       indices: 
       edges: []
