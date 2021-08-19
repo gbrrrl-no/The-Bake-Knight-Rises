@@ -6,6 +6,9 @@ public class PlayerCollectItem : MonoBehaviour
 {
     
     Player_Stats statsScript;
+    public Transform player;
+    public LayerMask lootLayer;
+    public Vector2 size;
 
     private void Awake()
     {
@@ -13,12 +16,16 @@ public class PlayerCollectItem : MonoBehaviour
         statsScript = root.GetComponent<Player_Stats>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Update()
     {
-        GameObject root = collision.transform.root.gameObject;
-        if(root.CompareTag("Loot"))
-        {
-            statsScript.increaseMeatCollection();
-        }
+            Vector2 position = player.position;
+            Collider2D hit = Physics2D.OverlapBox(position, size, 0, lootLayer);
+
+            if(hit != null){
+                if(hit.gameObject.tag == "Loot"){
+                    statsScript.increaseMeatCollection();
+                    Destroy(hit.transform.root.gameObject);
+                }
+            }
     }
 }

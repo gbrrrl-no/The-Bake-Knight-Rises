@@ -490,7 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 232937616}
   - component: {fileID: 232937617}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Circle_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,8 +539,8 @@ GameObject:
   - component: {fileID: 270058533}
   - component: {fileID: 270058534}
   m_Layer: 7
-  m_Name: Box_Collider
-  m_TagString: Untagged
+  m_Name: Player_Box_Collider
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -597,6 +597,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4392ee9ac44352741bd29299d5ec6b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 270058532}
+  lootLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  size: {x: 1, y: 1.692145}
 --- !u!1 &295352588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2900,7 +2905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 651432767}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Enemy_Pig_Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3690,7 +3695,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1288283813}
   - component: {fileID: 1288283814}
-  - component: {fileID: 1288283815}
   m_Layer: 7
   m_Name: Circle_Collider
   m_TagString: Untagged
@@ -3728,18 +3732,6 @@ CircleCollider2D:
   m_Offset: {x: -0.15, y: -0.24}
   serializedVersion: 2
   m_Radius: 0.1945757
---- !u!114 &1288283815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288283812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4392ee9ac44352741bd29299d5ec6b9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1431969741
 GameObject:
   m_ObjectHideFlags: 0

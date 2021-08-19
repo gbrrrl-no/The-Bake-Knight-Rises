@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 8023791745749340031}
   - component: {fileID: -1773904861166282785}
   - component: {fileID: -6765490884401195937}
-  - component: {fileID: 853877161764028156}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pig_Meat_Drop
   m_TagString: Loot
   m_Icon: {fileID: 0}
@@ -98,7 +97,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.06
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -132,15 +131,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.43971196, y: 0.4677028}
   m_EdgeRadius: 0
---- !u!114 &853877161764028156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3709667148418146279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f6acd07e852e5440895d8e00c3efc04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
