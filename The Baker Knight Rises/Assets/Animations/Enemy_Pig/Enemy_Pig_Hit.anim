@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1107241206036555090, guid: 796228e996da1b548900f808a085c49e, type: 3}
+      value: {fileID: -59066101396820148, guid: ec77127301ebe44aa90b2d96401eb80a, type: 3}
     - time: 0.1
-      value: {fileID: 8098470886054705025, guid: 796228e996da1b548900f808a085c49e, type: 3}
+      value: {fileID: -9037724387597929990, guid: ec77127301ebe44aa90b2d96401eb80a, type: 3}
     attribute: m_Sprite
     path: Enemy_Pig_Sprites
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1107241206036555090, guid: 796228e996da1b548900f808a085c49e, type: 3}
-    - {fileID: 8098470886054705025, guid: 796228e996da1b548900f808a085c49e, type: 3}
+    - {fileID: -59066101396820148, guid: ec77127301ebe44aa90b2d96401eb80a, type: 3}
+    - {fileID: -9037724387597929990, guid: ec77127301ebe44aa90b2d96401eb80a, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
