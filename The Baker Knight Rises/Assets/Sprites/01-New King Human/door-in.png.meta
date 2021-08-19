@@ -1,16 +1,31 @@
 fileFormatVersion: 2
-guid: 8b728e4af86214738b9422cf6b19c7a2
+guid: ea49410bf2bef4751ab636c257050472
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 827538889749247048
-    second: attack_0
+      213: 283006361917994846
+    second: door-in_0
   - first:
-      213: -5010287565412364656
-    second: attack_1
+      213: -3753490254607817957
+    second: door-in_1
   - first:
-      213: -5463148037355797382
-    second: attack_2
+      213: 6038653548707624090
+    second: door-in_2
+  - first:
+      213: -6065580426615910981
+    second: door-in_3
+  - first:
+      213: -5629432230757693663
+    second: door-in_4
+  - first:
+      213: 8697297829344866136
+    second: door-in_5
+  - first:
+      213: -5931435380598752086
+    second: door-in_6
+  - first:
+      213: 2703816884705863450
+    second: door-in_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -100,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: attack_0
+      name: door-in_0
       rect:
         serializedVersion: 2
         x: 0
@@ -114,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84433595c320c7b00800000000000000
-      internalID: 827538889749247048
+      spriteID: e573c4769c07de300800000000000000
+      internalID: 283006361917994846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_1
+      name: door-in_1
       rect:
         serializedVersion: 2
         x: 78
@@ -135,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09e0a014102e77ab0800000000000000
-      internalID: -5010287565412364656
+      spriteID: b13e532108ce8ebc0800000000000000
+      internalID: -3753490254607817957
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: attack_2
+      name: door-in_2
       rect:
         serializedVersion: 2
         x: 156
@@ -156,8 +171,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7409061ecffe24b0800000000000000
-      internalID: -5463148037355797382
+      spriteID: a94be5c886b9dc350800000000000000
+      internalID: 6038653548707624090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-in_3
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd0ff22dbab2dba0800000000000000
+      internalID: -6065580426615910981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-in_4
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1278d8e463d30e1b0800000000000000
+      internalID: -5629432230757693663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-in_5
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f60e7ab4203b870800000000000000
+      internalID: 8697297829344866136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-in_6
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac3a3b82fe4fada0800000000000000
+      internalID: -5931435380598752086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-in_7
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 0
+        width: 78
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17a8969123e58520800000000000000
+      internalID: 2703816884705863450
       vertices: []
       indices: 
       edges: []
