@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: 8f23ca2cc7102014eb6fec8324758b46
+guid: 6430b88ae7fee48288e4a462154b35e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7063903929861715703
-    second: Run (78x58)_0
+      213: -1882347247711912902
+    second: run_0
   - first:
-      213: 8626773255784356531
-    second: Run (78x58)_1
+      213: 7439426567979852956
+    second: run_1
   - first:
-      213: -5795003117160629848
-    second: Run (78x58)_2
+      213: -2673560216460186399
+    second: run_2
   - first:
-      213: 3561249728323253878
-    second: Run (78x58)_3
+      213: -5822559823783948592
+    second: run_3
   - first:
-      213: 3822881148397469178
-    second: Run (78x58)_4
+      213: -4997308686002322044
+    second: run_4
   - first:
-      213: 6879179259501797737
-    second: Run (78x58)_5
+      213: -7808277857516635856
+    second: run_5
   - first:
-      213: 1277852240713749110
-    second: Run (78x58)_6
+      213: 2102408166121253023
+    second: run_6
   - first:
-      213: -6436722398084169495
-    second: Run (78x58)_7
+      213: -828024806730890176
+    second: run_7
+  - first:
+      213: 7319402618797355783
+    second: run_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -92,7 +95,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,7 +107,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,33 +118,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run (78x58)_0
+      name: run_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 12
         y: 0
-        width: 78
+        width: 32
         height: 58
-      alignment: 9
-      pivot: {x: 0.405, y: 0.44}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9094b1d4dc8f7fd90800000000000000
-      internalID: -7063903929861715703
+      spriteID: a3c723cb62f80e5e0800000000000000
+      internalID: -1882347247711912902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (78x58)_1
+      name: run_1
       rect:
         serializedVersion: 2
-        x: 78
+        x: 91
         y: 0
-        width: 78
+        width: 32
         height: 58
       alignment: 9
       pivot: {x: 0.405, y: 0.44}
@@ -150,19 +153,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3badddcc19478b770800000000000000
-      internalID: 8626773255784356531
+      spriteID: c94ea0d3c072e3760800000000000000
+      internalID: 7439426567979852956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (78x58)_2
+      name: run_2
       rect:
         serializedVersion: 2
-        x: 156
+        x: 170
         y: 0
-        width: 78
+        width: 32
         height: 58
       alignment: 9
       pivot: {x: 0.405, y: 0.44}
@@ -171,19 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a9fb514e53049fa0800000000000000
-      internalID: -5795003117160629848
+      spriteID: 1ec2644f52b95ead0800000000000000
+      internalID: -2673560216460186399
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (78x58)_3
+      name: run_3
       rect:
         serializedVersion: 2
-        x: 234
+        x: 249
         y: 0
-        width: 78
+        width: 32
         height: 58
       alignment: 9
       pivot: {x: 0.405, y: 0.44}
@@ -192,19 +195,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 676f92572c91c6130800000000000000
-      internalID: 3561249728323253878
+      spriteID: 0de85e380bc123fa0800000000000000
+      internalID: -5822559823783948592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (78x58)_4
+      name: run_4
       rect:
         serializedVersion: 2
-        x: 312
+        x: 328
         y: 0
-        width: 78
+        width: 32
         height: 58
       alignment: 9
       pivot: {x: 0.405, y: 0.44}
@@ -213,19 +216,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: afdb4c4662a9d0530800000000000000
-      internalID: 3822881148397469178
+      spriteID: 4858bd91a3ef5aab0800000000000000
+      internalID: -4997308686002322044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (78x58)_5
+      name: run_5
       rect:
         serializedVersion: 2
-        x: 390
+        x: 407
         y: 0
-        width: 78
+        width: 32
         height: 58
       alignment: 9
       pivot: {x: 0.405, y: 0.44}
@@ -234,19 +237,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 961e6dcc611c77f50800000000000000
-      internalID: 6879179259501797737
+      spriteID: 0393c2b98ac63a390800000000000000
+      internalID: -7808277857516635856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (78x58)_6
+      name: run_6
       rect:
         serializedVersion: 2
-        x: 468
+        x: 486
         y: 0
-        width: 78
+        width: 32
         height: 58
       alignment: 9
       pivot: {x: 0.405, y: 0.44}
@@ -255,19 +258,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6721e23b7d7dbb110800000000000000
-      internalID: 1277852240713749110
+      spriteID: f98a98a86114d2d10800000000000000
+      internalID: 2102408166121253023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run (78x58)_7
+      name: run_7
       rect:
         serializedVersion: 2
-        x: 546
+        x: 565
         y: 0
-        width: 78
+        width: 32
         height: 58
       alignment: 9
       pivot: {x: 0.405, y: 0.44}
@@ -276,8 +279,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e08468051b2ca6a0800000000000000
-      internalID: -6436722398084169495
+      spriteID: 044089943d34284f0800000000000000
+      internalID: -828024806730890176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: run_8
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 0
+        width: 32
+        height: 58
+      alignment: 9
+      pivot: {x: 0.405, y: 0.44}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703fa75e6edb39560800000000000000
+      internalID: 7319402618797355783
       vertices: []
       indices: 
       edges: []
