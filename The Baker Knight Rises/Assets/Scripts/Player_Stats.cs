@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Stats : MonoBehaviour
 {
+    public Animator animator;
+
     public int curHealth;
     public int maxHealth = 100;
-    public Animator animator;
     public HealthBar healthBar;
 
-    private int collectedMeat = 0;
+    private int collectedMeat = 0; 
+    public Text counterText;
 
     // Start is called before the first frame update
     void Start()
@@ -38,5 +41,6 @@ public class Player_Stats : MonoBehaviour
     public void increaseMeatCollection()
     {
         collectedMeat++;
+        counterText.text = collectedMeat.ToString();
     }
 }
