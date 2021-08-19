@@ -1,54 +1,75 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Behaviour : MonoBehaviour
 {
+    private enum State {
+        Alive,
+        Dead
+    }
+
     #region Public Variables
-    public Transform rayCast;
-    public LayerMask rayCastMask;
-    public float rayCastLength;
+    [Header("Combat Variables")]
     public float attackDistance; //Min dist for attack
     public float moveSpeed;
     public float cooldownTimer; // Cooldown between attacks
     public int curHealth;
     public int maxHealth = 100;
+
+    [Header("Combat Objects")]
     public HealthBar healthBar;
+    public Transform leftLimit;
+    public Transform rightLimit;
+    public GameObject hotzone;
+    public GameObject triggerArea;
+    public Vector3 attackOffset;
+    [HideInInspector] public Transform target;
+    [HideInInspector] public bool isPlayerInRange;
+    [Header("Loot Table")]
+    public LootTable lootSystem;
     public BoxCollider2D playerBoxCollider;
     public CircleCollider2D playerCircleCollider;
     #endregion
 
     #region Private Variables
-    private RaycastHit2D hitLeft;
-    private RaycastHit2D hitRight;
-    private GameObject target;
+    private Rigidbody2D rb;
     private Animator anim;
     private float distance;
-    private bool isPlayerInRange;
-    private bool isOnCooldown;
     private float intTimer;
+    private bool isAttacking;
+    private bool isOnCooldown;
+    private bool isOnAttackRange;
+    private State state;
     private bool facingLeft;
     private int time2DisappearAfterDeath = 7; //seconds
     #endregion
 
     private void Awake()
     {
+        SelectTarget();
         intTimer = cooldownTimer;
         anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
         curHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        state = State.Alive;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (anim.GetBool("isDead") == false)
-        {
-            if (isPlayerInRange)
+        {   
+            if(!isAttacking && !isOnAttackRange)
             {
-                hitLeft = Physics2D.Raycast(rayCast.position, Vector2.left, rayCastLength, rayCastMask);
-                hitRight = Physics2D.Raycast(rayCast.position, Vector2.right, rayCastLength, rayCastMask);
-                RaycastDebugger();
+                Move();
+            }
+
+            if(!InsideOfLimits() && !isPlayerInRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Pig_Attack"))
+            {
+                SelectTarget();
             }
 
             if (isOnCooldown)
@@ -57,88 +78,49 @@ public class Enemy_Behaviour : MonoBehaviour
                 anim.SetBool("Attack", false);
             }
 
-            //When Player is detected
-            if (hitLeft.collider != null || hitRight.collider != null)
+
+            if(isPlayerInRange)
             {
                 EnemyLogic();
-            } else
-            {
-                isPlayerInRange = false;
             }
-
-            if(!isPlayerInRange)
-            {
-                anim.SetBool("canWalk", false);
-                StopAttack();
-            }
-        }
-    }
-
-    void LateUpdate (){
- 
-        Vector3 localScale = transform.localScale;
-        if (hitLeft.collider != null)
-        {
-            facingLeft = true;
-        }
-        else if (hitRight.collider != null)
-        {
-            facingLeft = false;
-        }
-        if (((facingLeft ) && (localScale.x < 0 )) || ((!facingLeft) && (localScale.x > 0 ))) 
-        {
-            localScale.x *= -1;
-        }
-        transform.localScale = localScale;
-    }
-
-
-    private void OnTriggerStay2D(Collider2D trigger)
-    {
-        //7 == Player Layer, Get Dinamycally later
-        if(trigger.gameObject.layer == 7)
-        {
-            target = trigger.gameObject;
-            isPlayerInRange = true;
         }
     }
 
     void EnemyLogic()
     {
-        distance = Vector2.Distance(transform.position, target.transform.position);
+        distance = Vector2.Distance(transform.position + attackOffset, target.position);
         if(distance > attackDistance)
         {
-            Move();
             StopAttack();
         } else if(!isOnCooldown)
         {
             Attack();
         }
-
-        
     }
     
     void Move()
     {
-        anim.SetBool("canWalk", true);
-        //Debug.Log(anim.GetCurrentAnimatorStateInfo(0).ToString());
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Pig_Attack"))
         {
-            Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
+            anim.SetBool("canWalk", true);
+            Vector2 targetPosition = new Vector2(target.position.x, transform.position.y);
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }
     }
 
     void Attack()
     {
-        cooldownTimer = intTimer; //Reset timer when Player enter Attack Ranger
-
         anim.SetBool("canWalk", false);
         anim.SetBool("Attack", true);
+        cooldownTimer = intTimer; //Reset timer when Player enter Attack Ranger
+        isAttacking = true;
+        isOnAttackRange = true;
     }
 
     void StopAttack()
     {
+        isAttacking = false;
+        isOnAttackRange = false;
         anim.SetBool("Attack", false);
     }
 
@@ -149,17 +131,6 @@ public class Enemy_Behaviour : MonoBehaviour
         {
             isOnCooldown = false;
             cooldownTimer = intTimer;
-        }
-    }
-
-    void RaycastDebugger()
-    {
-        if(distance > attackDistance)
-        {
-            Debug.DrawRay(rayCast.position, Vector2.left * rayCastLength, Color.red);
-        } else if(distance < attackDistance)
-        {
-            Debug.DrawRay(rayCast.position, Vector2.left * rayCastLength, Color.green);
         }
     }
 
@@ -174,6 +145,30 @@ public class Enemy_Behaviour : MonoBehaviour
         curHealth -= dmg;
         curHealth = Mathf.Max(curHealth, 0);
         healthBar.SetHealth(curHealth);
+        if (curHealth == 0 && state == State.Alive){
+            HandleDeath();       
+        }
+    }
+
+    public void HandleDeath()
+    {
+        state = State.Dead;
+        anim.SetBool("isDead", true);
+        healthBar.SetVisible(false);
+        DropLoot();
+        Destroy(this.gameObject);
+    }
+
+    private void DropLoot()
+    {
+        if(lootSystem != null)
+        {
+            GameObject toDrop = lootSystem.GetLoot();
+            if(toDrop != null)
+            {
+                Instantiate(toDrop, transform.position, Quaternion.identity);
+            }
+        }
         if (curHealth == 0){
             DiePig();
         }
@@ -210,5 +205,35 @@ public class Enemy_Behaviour : MonoBehaviour
     public void StopBeingHit()
     {
         anim.SetBool("isBeingHit", false);
+    }
+
+    private bool InsideOfLimits()
+    {
+        return transform.position.x > leftLimit.position.x && transform.position.x < rightLimit.position.x;
+    }
+
+    public void SelectTarget()
+    {
+        float distanceToLeft = Vector2.Distance(transform.position, leftLimit.position);
+        float distanceToRight = Vector2.Distance(transform.position, rightLimit.position);
+
+        if (distanceToRight > distanceToLeft) target = rightLimit;
+        else target = leftLimit;
+
+        Flip();
+    }
+
+    public void Flip()
+    {
+        Vector3 rotation = transform.eulerAngles;
+        if(transform.position.x < target.position.x)
+        {
+            rotation.y = 180;
+        } else
+        {
+            rotation.y = 0;
+        }
+
+        transform.eulerAngles = rotation;
     }
 }
