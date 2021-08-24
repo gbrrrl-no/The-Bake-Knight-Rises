@@ -34,6 +34,11 @@ public class PlayerActions : MonoBehaviour
         {
             Attack();
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ConsumeWeapon();
+        }
     }
 
     void OnDrawGizmosSelected()
@@ -74,5 +79,10 @@ public class PlayerActions : MonoBehaviour
             isOnCooldown = false;
             cooldownTimer = intTimer;
         }
+    }
+
+    void ConsumeWeapon()
+    {
+        gameObject.GetComponent<Player_Stats>().ConsumeWeaponCharge();
     }
 }

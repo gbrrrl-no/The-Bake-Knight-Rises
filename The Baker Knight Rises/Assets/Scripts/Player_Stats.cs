@@ -11,6 +11,9 @@ public class Player_Stats : MonoBehaviour
     public int maxHealth = 100;
     public HealthBar healthBar;
 
+    private int weaponCharges = 3;
+    public GameObject[] ChargesCounter;
+
     private int collectedMeat = 0; 
     public Text counterText;
 
@@ -42,5 +45,23 @@ public class Player_Stats : MonoBehaviour
     {
         collectedMeat++;
         counterText.text = collectedMeat.ToString();
+    }
+
+    public void ConsumeWeaponCharge()
+    {
+        int heal = 30;
+        if (weaponCharges > 0)
+        {
+            weaponCharges--;
+            ChargesCounter[weaponCharges].SetActive(false);
+            Debug.Log("Consumed charge and healed +"+(Mathf.Min(100 - curHealth, heal)) +" health");
+            curHealth += heal;
+            curHealth = Mathf.Min(curHealth, 100);
+            healthBar.SetHealth(curHealth);
+        }
+        else 
+        {
+            Debug.Log("No charges left");
+        }
     }
 }
