@@ -155,7 +155,6 @@ MonoBehaviour:
   restartDelay: 1
   CompleteLevelUI: {fileID: 1202136026}
   enemyPig: {fileID: 1467459937}
-  numOfEnemies: 0
 --- !u!4 &10036401
 Transform:
   m_ObjectHideFlags: 0
@@ -3746,7 +3745,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -4255,7 +4254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1467459938
 Animator:
   serializedVersion: 3
@@ -4920,7 +4919,7 @@ GameObject:
   m_Layer: 0
   m_Name: END
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
