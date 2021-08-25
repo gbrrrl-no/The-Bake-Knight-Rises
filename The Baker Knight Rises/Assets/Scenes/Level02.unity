@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restartDelay: 1
   CompleteLevelUI: {fileID: 1202136026}
+  enemyPig: {fileID: 0}
 --- !u!4 &10036401
 Transform:
   m_ObjectHideFlags: 0
