@@ -62,7 +62,13 @@ public class PlayerActions : MonoBehaviour
             {
                 Debug.Log("Enemy hit");
                 GameObject root = collidedEnemy.transform.root.gameObject;
-                root.GetComponent<Enemy_Behaviour>().TakeDamage(20);
+                if(root.GetComponent<Enemy_Behaviour>()) {
+                    root.GetComponent<Enemy_Behaviour>().TakeDamage(20);
+                }
+
+                if(root.GetComponent<BossHealth>()) {
+                    root.GetComponent<BossHealth>().TakeDamage(20);
+                }
 
                 //Debug.Log(collidedEnemy.GetComponent<Enemy_Behaviour>().curHealth);            
             }

@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &10036400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3094,9 +3094,12 @@ GameObject:
   - component: {fileID: 586988131}
   - component: {fileID: 586988132}
   - component: {fileID: 586988130}
+  - component: {fileID: 586988133}
+  - component: {fileID: 586988134}
+  - component: {fileID: 586988135}
   m_Layer: 6
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3160,8 +3163,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586988127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.89, y: 1.73, z: 0}
-  m_LocalScale: {x: 1.9339793, y: 1.9339793, z: 1.9339793}
+  m_LocalPosition: {x: 3.0576, y: 1.4844, z: 0}
+  m_LocalScale: {x: 1.9205843, y: 1.9205843, z: 1.9205843}
   m_Children:
   - {fileID: 64103257}
   - {fileID: 68504535}
@@ -3234,6 +3237,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3764543, y: 0.5102418}
   m_EdgeRadius: 0
+--- !u!114 &586988133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586988127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74c73a08bb65ca46b26b20ac103b988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 756992087}
+  isFlipped: 0
+--- !u!114 &586988134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586988127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7edfaa77f8bf244f950079181713624, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 15
+  attackOffset: {x: -1.5, y: 0.35, z: 0}
+  attackRange: 1.2
+  attackMask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!114 &586988135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586988127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732bd543bff5d6a4f8a6b9e3196ad799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  isInvulnerable: 0
 --- !u!1 &651432766
 GameObject:
   m_ObjectHideFlags: 0
