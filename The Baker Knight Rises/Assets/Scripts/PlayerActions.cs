@@ -37,7 +37,7 @@ public class PlayerActions : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ConsumeWeapon();
+            ConsumeWeaponRestoreHealth();
         }
     }
 
@@ -81,7 +81,7 @@ public class PlayerActions : MonoBehaviour
         }
     }
 
-    void ConsumeWeapon()
+    void ConsumeWeaponRestoreHealth()
     {
         gameObject.GetComponent<Player_Stats>().ConsumeWeaponCharge();
     }

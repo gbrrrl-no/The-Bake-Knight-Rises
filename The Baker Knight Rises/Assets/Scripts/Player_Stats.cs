@@ -17,6 +17,8 @@ public class Player_Stats : MonoBehaviour
     private int collectedMeat = 0; 
     public Text counterText;
 
+    const int restoreHealth = 50;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,13 +51,12 @@ public class Player_Stats : MonoBehaviour
 
     public void ConsumeWeaponCharge()
     {
-        int heal = 30;
         if (weaponCharges > 0)
         {
             weaponCharges--;
             ChargesCounter[weaponCharges].SetActive(false);
-            Debug.Log("Consumed charge and healed +"+(Mathf.Min(100 - curHealth, heal)) +" health");
-            curHealth += heal;
+            Debug.Log("Consumed charge and healed +"+(Mathf.Min(100 - curHealth, restoreHealth)) +" health");
+            curHealth += restoreHealth;
             curHealth = Mathf.Min(curHealth, 100);
             healthBar.SetHealth(curHealth);
         }
