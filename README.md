@@ -9,4 +9,8 @@ Bake Knight Rises é um jogo emocionante, onde você testa suas habilidades com 
 Vem testar o jogo!
 
 ## Movimentação
-Bake Knight Rises utiliza os comandos comuns (WASD) e Q para consumir a própria arma e recuperar sua vida!
+Bake Knight Rises utiliza os comandos comuns (WASD) e ESPAÇO para atacar!
+![Alt Text](https://drive.google.com/uc?export=view&id=1NmXDl6jRks-z_e8zBzSJjE5VRGoDePc_)
+
+e quando a situação estiver perigosa, aperte Q para consumir a própria arma e recuperar sua vida!
+![Alt Text](https://drive.google.com/uc?export=view&id=15XESpU7dx-dpPYyIadV3ht3esFuouk2x)
