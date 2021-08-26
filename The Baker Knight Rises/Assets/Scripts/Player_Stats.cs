@@ -53,18 +53,22 @@ public class Player_Stats : MonoBehaviour
 
     public void ConsumeWeaponCharge()
     {
-        if (weaponCharges > 0)
-        {
-            weaponCharges--;
-            ChargesCounter[weaponCharges].SetActive(false);
-            Debug.Log("Consumed charge and healed +"+(Mathf.Min(100 - curHealth, restoreHealth)) +" health");
-            curHealth += restoreHealth;
-            curHealth = Mathf.Min(curHealth, 100);
-            healthBar.SetHealth(curHealth);
-        }
-        else 
-        {
-            Debug.Log("No charges left");
+        if (curHealth > 0) { 
+            if (weaponCharges > 0)
+            {
+                animator.SetBool("IsHealing", true);
+                weaponCharges--;
+                ChargesCounter[weaponCharges].SetActive(false);
+                Debug.Log("Consumed charge and healed +"+(Mathf.Min(100 - curHealth, restoreHealth)) +" health");
+
+                curHealth += restoreHealth;
+                curHealth = Mathf.Min(curHealth, 100);
+                healthBar.SetHealth(curHealth);
+            }
+            else 
+            {
+                Debug.Log("No charges left");
+            }
         }
     }
 }
