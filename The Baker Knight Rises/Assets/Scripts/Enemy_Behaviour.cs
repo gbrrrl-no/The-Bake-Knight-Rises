@@ -31,6 +31,8 @@ public class Enemy_Behaviour : MonoBehaviour
     public LootTable lootSystem;
     public BoxCollider2D playerBoxCollider;
     public CircleCollider2D playerCircleCollider;
+    [Header("Other")]
+    public GameObject player;
     #endregion
 
     #region Private Variables
@@ -156,7 +158,14 @@ public class Enemy_Behaviour : MonoBehaviour
         anim.SetBool("isDead", true);
         healthBar.SetVisible(false);
         DropLoot();
+        AddKilledToPlayer();
         Destroy(this.gameObject);
+    }
+
+    private void AddKilledToPlayer()
+    {
+        Player_Stats ps = player.GetComponent<Player_Stats>();
+        ps.enemiesKilled++;
     }
 
     private void DropLoot()
