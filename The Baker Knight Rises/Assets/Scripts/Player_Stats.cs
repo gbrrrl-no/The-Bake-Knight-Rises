@@ -19,6 +19,8 @@ public class Player_Stats : MonoBehaviour
 
     const int restoreHealth = 50;
 
+    public int enemiesKilled = 0;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {   
@@ -9,7 +10,7 @@ public class GameManager : MonoBehaviour
     public GameObject CompleteLevelUI;
 
     public GameObject enemyPig;
-    public const int numMaxOfEnemies = 5;
+    public readonly int numMaxOfEnemies = 5;
     private int numOfEnemies = 0;
     private float lastEnemyCreated = 0;
 
@@ -21,7 +22,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         // criar inimigo a cada 5 segundos
-        if (Time.timeSinceLevelLoad > lastEnemyCreated + 5 && numOfEnemies <= numMaxOfEnemies)
+        if (Time.timeSinceLevelLoad > lastEnemyCreated + 5 && numOfEnemies < numMaxOfEnemies)
         {
             CreateEnemyPig();
         }
